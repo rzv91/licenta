@@ -8,6 +8,7 @@ $grayMediumLight: #eaeaea;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
+ 
 }
 
 /* sidebar */
@@ -19,10 +20,11 @@ aside {
     &:first-child {
       border: 0;
       padding-top: 0;
+      
     }
     span {
       display: block;
-      margin-bottom: 3px;
+      margin-bottom: 1px;
       line-height: 1;
     }
     h1 {
@@ -52,6 +54,19 @@ input, textarea, select, .uneditable-input {
 
 input {
   height: auto !important;
+}
+
+#error_explanation {
+  color: #f00;
+  ul {
+    list-style: none;
+    margin: 0 0 18px 0;
+  }
+}
+
+.field_with_errors {
+  @extend .control-group;
+  @extend .error;
 }
 
 /* miscellaneous */

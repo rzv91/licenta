@@ -6,19 +6,19 @@
     <%= form_for(@user) do |f| %>
      <%= render'shared/error_messages' %>
 
-      <%= f.label :name %>
+      <%= f.label :name, "Name / Nume" %>
       <%= f.text_field :name %>
 
-      <%= f.label :email %>
+      <%= f.label :email, "E-mail / Poştă Electronică" %>
       <%= f.text_field :email %>
 
-      <%= f.label :password %>
+      <%= f.label :password, "Password / Parolă" %>
       <%= f.password_field :password %>
 
-      <%= f.label :password_confirmation, "Confirmation" %>
+      <%= f.label :password_confirmation, "Password Confirmation / Confirmare Parolă" %>
       <%= f.password_field :password_confirmation %>
 
-      <%= f.submit "Create my account", class: "btn btn-large btn-primary" %>
+      <%= f.submit "Create my account / Crează contul", class: "btn btn-large btn-primary" %>
     <% end %>
   </div>
 </div>
