@@ -15,7 +15,7 @@ describe "User pages" do
   describe "signup page" do
     before { visit signup_path }
 
-    it { should have_content('Sign up') }
+    it { should have_content('') }
     it { should have_title(full_title('Sign up')) }
   end
 
@@ -25,18 +25,18 @@ describe "User pages" do
 
     let(:submit) { "Create my account" }
 
-    describe "with invalid information" do
+ describe "with invalid information" do
       it "should not create a user" do
         expect { click_button submit }.not_to change(User, :count)
       end
     end
 
-    describe "with valid information" do
+ describe "with valid information" do
       before do
-        fill_in "Name",         with: "Example User"
-        fill_in "Email",        with: "user@example.com"
-        fill_in "Password",     with: "foobar"
-        fill_in "Confirmation", with: "foobar"
+        fill_in "Name / Nume",         with: "Example User"
+        fill_in "E-mail / Poştă Electronică",        with: "user@example.com"
+        fill_in "Password / Parolă",     with: "password"
+        fill_in "Password Confirmation / Confirmare Parolă", with: "password"
       end
 
       it "should create a user" do
@@ -45,5 +45,10 @@ describe "User pages" do
     end
   end
 
+describe "followed by signout" do
+        before { click_link "Sign out" }
+        it { should have_link('Sign out', href: signout_path) }
+        it { should have_link('Sign in') }
+      end
 
 end

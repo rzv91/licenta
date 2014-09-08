@@ -15,7 +15,7 @@
       <%= f.label :password, "Password / Parolă" %>
       <%= f.password_field :password %>
 
-      <%= f.label :password_confirmation, "Confirmation / Confirmare" %>
+      <%= f.label :password_confirmation, "Password Confirmation / Confirmare Parolă" %>
       <%= f.password_field :password_confirmation %>
 
       <%= f.submit "Create my account / Crează contul", class: "btn btn-large btn-primary" %>

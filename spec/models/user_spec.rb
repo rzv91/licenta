@@ -15,6 +15,10 @@ describe User do
   it { should respond_to(:password) }
   it { should respond_to(:password_confirmation) }
   it { should respond_to(:authenticate) }
+  it { should respond_to(:password_confirmation) }
+  it { should respond_to(:remember_token) }
+  it { should respond_to(:authenticate) }
+
 
   it { should be_valid }
 
@@ -111,6 +115,12 @@ describe "email address with mixed case" do
 
   end
 end
+
+
+  describe "remember token" do
+    before { @user.save }
+    its(:remember_token) { should_not be_blank }
+  end
 
 end
 
