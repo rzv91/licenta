@@ -45,9 +45,5 @@ describe "User pages" do
     end
   end
 
-describe "followed by signout" do
-        before { click_link "Sign out" }
-        it { should have_link('Sign in') }
-      end
 
 end
