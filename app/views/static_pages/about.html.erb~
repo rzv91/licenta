@@ -1,0 +1,8 @@
+<% provide(:title, 'About Us') %>
+
+<h1>About Us</h1>
+<p>
+  Aceasta <a href="https://licentaboaca.heroku.com">aplicatie web</a>
+  e un proiect propriu pentru a invata web development
+  cu <a href="http://rubyonrails.org/">Ruby on Rails</a>. 
+</p>
